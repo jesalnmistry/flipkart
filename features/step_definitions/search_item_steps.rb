@@ -9,6 +9,5 @@ When /^I search for (.*)$/ do |search_query|
 end
 
 Then /^I should be able see the results of my search$/ do
-  find(:xpath, '//*[@id="selectedFilters"]/div[1]/span[2]').should have_content(@query)
-
+  find(:xpath, '//*[@id="browse-results-area"]//*[@class="query"]', :text => @query)
 end

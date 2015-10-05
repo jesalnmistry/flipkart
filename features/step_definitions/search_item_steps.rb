@@ -9,5 +9,5 @@ When /^I search for (.*)$/ do |search_query|
 end
 
 Then /^I should be able see the results of my search$/ do
-  find(:xpath, '//*[@id="browse-results-area"]//*[@class="query"]', :text => @query)
+  has_text?('Mobiles & Accessories')
 end
